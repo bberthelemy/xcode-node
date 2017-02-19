@@ -1,0 +1,1422 @@
+{
+  "classes": {},
+  "objectVersion": "46",
+  "archiveVersion": "1",
+  "objects": {
+    "3DAD3E991DF850E9000B6D8A": {
+      "path": "libRCTWebSocket-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3E981DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302DB1ABCB9D200DB3ED1": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302D31ABCB9D200DB3ED1",
+      "remoteGlobalIDString": "58B511DB1A9E6C8500147676",
+      "remoteInfo": "RCTNetwork",
+      "proxyType": "2"
+    },
+    "832341B11AAA6A8300B99B32": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "832341B51AAA6A8300B99B32",
+        "3DAD3E941DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "78C398B91ACF4ADC00677621": {
+      "path": "libRCTLinking.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "78C398B81ACF4ADC00677621",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "2D02E4981E0B4A5E006451C7": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks",
+        "DEBUG_INFORMATION_FORMAT": "dwarf-with-dsym",
+        "CLANG_WARN_SUSPICIOUS_MOVE": "YES",
+        "CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
+        "ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME": "LaunchImage",
+        "INFOPLIST_FILE": "TestProject-tvOS\/Info.plist",
+        "CLANG_WARN_INFINITE_RECURSION": "YES",
+        "SDKROOT": "appletvos",
+        "TARGETED_DEVICE_FAMILY": "3",
+        "TVOS_DEPLOYMENT_TARGET": "9.2",
+        "GCC_NO_COMMON_BLOCKS": "YES",
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "App Icon & Top Shelf Image",
+        "CLANG_ANALYZER_NONNULL": "YES",
+        "OTHER_LDFLAGS": [
+          "-ObjC",
+          "-lc++"
+        ],
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.facebook.REACT.TestProject-tvOS",
+        "COPY_PHASE_STRIP": "NO",
+        "PRODUCT_NAME": "$(TARGET_NAME)"
+      },
+      "name": "Release"
+    },
+    "5E9157361DD0AC6A00FF2AA8": {
+      "isa": "PBXBuildFile",
+      "fileRef": "5E9157331DD0AC6500FF2AA8"
+    },
+    "13B07FAE1A68108700A75B9A": {
+      "isa": "PBXGroup",
+      "name": "TestProject",
+      "children": [
+        "008F07F21AC5B25A0029DE68",
+        "13B07FAF1A68108700A75B9A",
+        "13B07FB01A68108700A75B9A",
+        "13B07FB51A68108700A75B9A",
+        "13B07FB61A68108700A75B9A",
+        "13B07FB11A68108700A75B9A",
+        "13B07FB71A68108700A75B9A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "3DAD3E881DF850E9000B6D8A": {
+      "path": "libRCTLinking-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3E871DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "2DCD954D1E0B4F2C00145EB5": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00E356F21AD99517003FC87E"
+    },
+    "139FDEE71B06529A00C62182": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "139FDEF41B06529B00C62182",
+        "3DAD3E991DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "3DAD3E931DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "832341B01AAA6A8300B99B32",
+      "remoteGlobalIDString": "2D2A287B1D9B048500D4039D",
+      "remoteInfo": "RCTText-tvOS",
+      "proxyType": "2"
+    },
+    "2D02E4C81E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3E991DF850E9000B6D8A"
+    },
+    "13B07FB71A68108700A75B9A": {
+      "path": "TestProject\/main.m",
+      "isa": "PBXFileReference",
+      "sourceTree": "<group>",
+      "name": "main.m",
+      "fileEncoding": "4",
+      "lastKnownFileType": "sourcecode.c.objc"
+    },
+    "146834031AC3E56700842450": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "83CBBA2E1A601D0E00E9B192",
+      "remoteInfo": "React",
+      "proxyType": "2"
+    },
+    "3DAD3E841DF850E9000B6D8A": {
+      "path": "libRCTImage-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3E831DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "13B07FB51A68108700A75B9A": {
+      "path": "TestProject\/Images.xcassets",
+      "isa": "PBXFileReference",
+      "name": "Images.xcassets",
+      "lastKnownFileType": "folder.assetcatalog",
+      "sourceTree": "<group>"
+    },
+    "78C398B11ACF4ADC00677621": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "78C398B91ACF4ADC00677621",
+        "3DAD3E881DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "83CBBA201A601CBA00E9B192": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "CLANG_WARN_ENUM_CONVERSION": "YES",
+        "GCC_WARN_UNUSED_VARIABLE": "YES",
+        "GCC_WARN_ABOUT_RETURN_TYPE": "YES_ERROR",
+        "GCC_PREPROCESSOR_DEFINITIONS": [
+          "DEBUG=1",
+          "$(inherited)"
+        ],
+        "ONLY_ACTIVE_ARCH": "YES",
+        "CLANG_ENABLE_MODULES": "YES",
+        "CLANG_CXX_LANGUAGE_STANDARD": "gnu++0x",
+        "GCC_SYMBOLS_PRIVATE_EXTERN": "NO",
+        "GCC_WARN_UNINITIALIZED_AUTOS": "YES_AGGRESSIVE",
+        "CLANG_WARN_INT_CONVERSION": "YES",
+        "MTL_ENABLE_DEBUG_INFO": "YES",
+        "CLANG_WARN_CONSTANT_CONVERSION": "YES",
+        "GCC_OPTIMIZATION_LEVEL": "0",
+        "GCC_C_LANGUAGE_STANDARD": "gnu99",
+        "CLANG_WARN__DUPLICATE_METHOD_MATCH": "YES",
+        "CLANG_WARN_EMPTY_BODY": "YES",
+        "GCC_WARN_64_TO_32_BIT_CONVERSION": "YES",
+        "ALWAYS_SEARCH_USER_PATHS": "NO",
+        "COPY_PHASE_STRIP": "NO",
+        "CLANG_ENABLE_OBJC_ARC": "YES",
+        "CLANG_WARN_BOOL_CONVERSION": "YES",
+        "CLANG_WARN_DIRECT_OBJC_ISA_USAGE": "YES_ERROR",
+        "GCC_WARN_UNUSED_FUNCTION": "YES",
+        "CLANG_WARN_OBJC_ROOT_CLASS": "YES_ERROR",
+        "CODE_SIGN_IDENTITY[sdk=iphoneos*]": "iPhone Developer",
+        "GCC_DYNAMIC_NO_PIC": "NO",
+        "IPHONEOS_DEPLOYMENT_TARGET": "8.0",
+        "SDKROOT": "iphoneos",
+        "CLANG_CXX_LIBRARY": "libc++",
+        "ENABLE_STRICT_OBJC_MSGSEND": "YES",
+        "CLANG_WARN_UNREACHABLE_CODE": "YES",
+        "GCC_WARN_UNDECLARED_SELECTOR": "YES"
+      },
+      "name": "Debug"
+    },
+    "008F07F21AC5B25A0029DE68": {
+      "path": "main.jsbundle",
+      "isa": "PBXFileReference",
+      "sourceTree": "<group>",
+      "fileEncoding": "4",
+      "lastKnownFileType": "text"
+    },
+    "13B07FB11A68108700A75B9A": {
+      "path": "TestProject",
+      "isa": "PBXVariantGroup",
+      "name": "LaunchScreen.xib",
+      "children": [
+        "13B07FB21A68108700A75B9A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E48F1E0B4A5D006451C7": {
+      "buildConfigurationList": "2D02E4BB1E0B4A5E006451C7",
+      "productReference": "2D02E4901E0B4A5D006451C7",
+      "productType": "com.apple.product-type.bundle.unit-test",
+      "productName": "TestProject-tvOSTests",
+      "isa": "PBXNativeTarget",
+      "buildPhases": [
+        "2D02E48C1E0B4A5D006451C7",
+        "2D02E48D1E0B4A5D006451C7",
+        "2D02E48E1E0B4A5D006451C7"
+      ],
+      "dependencies": [
+        "2D02E4921E0B4A5D006451C7"
+      ],
+      "name": "TestProject-tvOSTests",
+      "buildRules": []
+    },
+    "00C302E41ABCB9EE00DB3ED1": {
+      "path": "libRCTVibration.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "00C302E31ABCB9EE00DB3ED1",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "13B07F8E1A680F5B00A75B9A": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "13B07FBF1A68108700A75B9A",
+        "13B07FBD1A68108700A75B9A"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "2D02E48D1E0B4A5D006451C7": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "832341BD1AAA6AB300B99B32": {
+      "isa": "PBXBuildFile",
+      "fileRef": "832341B51AAA6A8300B99B32"
+    },
+    "5E9157341DD0AC6500FF2AA8": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "5E91572D1DD0AC6500FF2AA8",
+      "remoteGlobalIDString": "2D2A28201D9B03D100D4039D",
+      "remoteInfo": "RCTAnimation-tvOS",
+      "proxyType": "2"
+    },
+    "13B07F8C1A680F5B00A75B9A": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "146834051AC3E58100842450",
+        "5E9157361DD0AC6A00FF2AA8",
+        "00C302E51ABCBA2D00DB3ED1",
+        "00C302E71ABCBA2D00DB3ED1",
+        "00C302E81ABCBA2D00DB3ED1",
+        "133E29F31AD74F7200F7D852",
+        "00C302E91ABCBA2D00DB3ED1",
+        "139105C61AF99C1200B5F7CC",
+        "832341BD1AAA6AB300B99B32",
+        "00C302EA1ABCBA2D00DB3ED1",
+        "139FDEF61B0652A700C62182"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "00E356F71AD99517003FC87E": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "IPHONEOS_DEPLOYMENT_TARGET": "8.0",
+        "COPY_PHASE_STRIP": "NO",
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE": "TestProjectTests\/Info.plist",
+        "OTHER_LDFLAGS": [
+          "-ObjC",
+          "-lc++"
+        ],
+        "TEST_HOST": "$(BUILT_PRODUCTS_DIR)\/TestProject.app\/TestProject",
+        "BUNDLE_LOADER": "$(TEST_HOST)",
+        "PRODUCT_NAME": "$(TARGET_NAME)"
+      },
+      "name": "Release"
+    },
+    "5E9157321DD0AC6500FF2AA8": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "5E91572D1DD0AC6500FF2AA8",
+      "remoteGlobalIDString": "134814201AA4EA6300B7C361",
+      "remoteInfo": "RCTAnimation",
+      "proxyType": "2"
+    },
+    "139FDEF41B06529B00C62182": {
+      "path": "libRCTWebSocket.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "139FDEF31B06529B00C62182",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "13B07F951A680F5B00A75B9A": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks",
+        "INFOPLIST_FILE": "TestProject\/Info.plist",
+        "OTHER_LDFLAGS": [
+          "$(inherited)",
+          "-ObjC",
+          "-lc++"
+        ],
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "VERSIONING_SYSTEM": "apple-generic",
+        "PRODUCT_NAME": "TestProject",
+        "CURRENT_PROJECT_VERSION": "1"
+      },
+      "name": "Release"
+    },
+    "00E356F51AD99517003FC87E": {
+      "isa": "PBXTargetDependency",
+      "target": "13B07F861A680F5B00A75B9A",
+      "targetProxy": "00E356F41AD99517003FC87E"
+    },
+    "00E356F31AD99517003FC87E": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00E356F21AD99517003FC87E"
+    },
+    "13B07F931A680F5B00A75B9A": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "13B07F941A680F5B00A75B9A",
+        "13B07F951A680F5B00A75B9A"
+      ]
+    },
+    "00E356F11AD99517003FC87E": {
+      "path": "Info.plist",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "text.plist.xml",
+      "sourceTree": "<group>"
+    },
+    "3DAD3EAE1DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "3D3CD9181DE5FBD800167DC4",
+      "remoteInfo": "jschelpers-tvOS",
+      "proxyType": "2"
+    },
+    "3DAD3EAC1DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "3D3CD90B1DE5FBD600167DC4",
+      "remoteInfo": "jschelpers",
+      "proxyType": "2"
+    },
+    "146833FF1AC3E56700842450": {
+      "path": "..\/node_modules\/react-native\/React\/React.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "React.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "00DD1BFF1BD5951E006B06BC": {
+      "inputPaths": [],
+      "buildActionMask": "2147483647",
+      "shellPath": "\/bin\/sh",
+      "isa": "PBXShellScriptBuildPhase",
+      "outputPaths": [],
+      "runOnlyForDeploymentPostprocessing": "0",
+      "shellScript": "export NODE_BINARY=node\n..\/node_modules\/react-native\/packager\/react-native-xcode.sh",
+      "files": [],
+      "name": "Bundle React Native code and images"
+    },
+    "2D02E4BA1E0B4A5E006451C7": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "2D02E4971E0B4A5E006451C7",
+        "2D02E4981E0B4A5E006451C7"
+      ]
+    },
+    "139105C01AF99BAD00B5F7CC": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "139105B61AF99BAD00B5F7CC",
+      "remoteGlobalIDString": "134814201AA4EA6300B7C361",
+      "remoteInfo": "RCTSettings",
+      "proxyType": "2"
+    },
+    "3DAD3EAA1DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "3D3CD9321DE5FBEE00167DC4",
+      "remoteInfo": "cxxreact-tvOS",
+      "proxyType": "2"
+    },
+    "00E357021AD99517003FC87E": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "00E356F61AD99517003FC87E",
+        "00E356F71AD99517003FC87E"
+      ]
+    },
+    "00C302AB1ABCB8CE00DB3ED1": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302A71ABCB8CE00DB3ED1",
+      "remoteGlobalIDString": "134814201AA4EA6300B7C361",
+      "remoteInfo": "RCTActionSheet",
+      "proxyType": "2"
+    },
+    "2D02E4791E0B4A5D006451C7": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "2D02E4BD1E0B4A84006451C7"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "2D02E49A1E0B4A5E006451C7": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
+        "DEBUG_INFORMATION_FORMAT": "dwarf-with-dsym",
+        "CLANG_WARN_SUSPICIOUS_MOVE": "YES",
+        "BUNDLE_LOADER": "$(TEST_HOST)",
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE": "TestProject-tvOSTests\/Info.plist",
+        "CLANG_WARN_INFINITE_RECURSION": "YES",
+        "TEST_HOST": "$(BUILT_PRODUCTS_DIR)\/TestProject-tvOS.app\/TestProject-tvOS",
+        "TVOS_DEPLOYMENT_TARGET": "10.1",
+        "GCC_NO_COMMON_BLOCKS": "YES",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "CLANG_ANALYZER_NONNULL": "YES",
+        "SDKROOT": "appletvos",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.facebook.REACT.TestProject-tvOSTests",
+        "COPY_PHASE_STRIP": "NO"
+      },
+      "name": "Release"
+    },
+    "00C302E81ABCBA2D00DB3ED1": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00C302C01ABCB91800DB3ED1"
+    },
+    "2D02E4771E0B4A5D006451C7": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "2D02E4BF1E0B4AB3006451C7",
+        "2D02E4BC1E0B4A80006451C7"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "146834051AC3E58100842450": {
+      "isa": "PBXBuildFile",
+      "fileRef": "146834041AC3E56700842450"
+    },
+    "3DAD3EA91DF850E9000B6D8A": {
+      "path": "libcxxreact.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EA81DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "3DAD3E8F1DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "139105B61AF99BAD00B5F7CC",
+      "remoteGlobalIDString": "2D2A28611D9B046600D4039D",
+      "remoteInfo": "RCTSettings-tvOS",
+      "proxyType": "2"
+    },
+    "00C302DC1ABCB9D200DB3ED1": {
+      "path": "libRCTNetwork.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "00C302DB1ABCB9D200DB3ED1",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "3DAD3EA71DF850E9000B6D8A": {
+      "path": "libyoga.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EA61DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "3DAD3E981DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "139FDEE61B06529A00C62182",
+      "remoteGlobalIDString": "2D2A28881D9B049200D4039D",
+      "remoteInfo": "RCTWebSocket-tvOS",
+      "proxyType": "2"
+    },
+    "00C302B61ABCB90400DB3ED1": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "00C302BA1ABCB90400DB3ED1"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E4991E0B4A5E006451C7": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
+        "DEBUG_INFORMATION_FORMAT": "dwarf",
+        "CLANG_WARN_SUSPICIOUS_MOVE": "YES",
+        "BUNDLE_LOADER": "$(TEST_HOST)",
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE": "TestProject-tvOSTests\/Info.plist",
+        "CLANG_WARN_INFINITE_RECURSION": "YES",
+        "TEST_HOST": "$(BUILT_PRODUCTS_DIR)\/TestProject-tvOS.app\/TestProject-tvOS",
+        "ENABLE_TESTABILITY": "YES",
+        "TVOS_DEPLOYMENT_TARGET": "10.1",
+        "GCC_NO_COMMON_BLOCKS": "YES",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "CLANG_ANALYZER_NONNULL": "YES",
+        "SDKROOT": "appletvos",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.facebook.REACT.TestProject-tvOSTests"
+      },
+      "name": "Debug"
+    },
+    "13B07FBC1A68108700A75B9A": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB01A68108700A75B9A"
+    },
+    "3DAD3E8B1DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302D31ABCB9D200DB3ED1",
+      "remoteGlobalIDString": "2D2A28541D9B044C00D4039D",
+      "remoteInfo": "RCTNetwork-tvOS",
+      "proxyType": "2"
+    },
+    "3DAD3EA51DF850E9000B6D8A": {
+      "path": "libyoga.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EA41DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "13B07FAF1A68108700A75B9A": {
+      "path": "TestProject\/AppDelegate.h",
+      "isa": "PBXFileReference",
+      "sourceTree": "<group>",
+      "name": "AppDelegate.h",
+      "fileEncoding": "4",
+      "lastKnownFileType": "sourcecode.c.h"
+    },
+    "00C302A81ABCB8CE00DB3ED1": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "00C302AC1ABCB8CE00DB3ED1"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E4971E0B4A5E006451C7": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks",
+        "DEBUG_INFORMATION_FORMAT": "dwarf",
+        "CLANG_WARN_SUSPICIOUS_MOVE": "YES",
+        "CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
+        "ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME": "LaunchImage",
+        "INFOPLIST_FILE": "TestProject-tvOS\/Info.plist",
+        "CLANG_WARN_INFINITE_RECURSION": "YES",
+        "TARGETED_DEVICE_FAMILY": "3",
+        "ENABLE_TESTABILITY": "YES",
+        "TVOS_DEPLOYMENT_TARGET": "9.2",
+        "GCC_NO_COMMON_BLOCKS": "YES",
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "App Icon & Top Shelf Image",
+        "CLANG_ANALYZER_NONNULL": "YES",
+        "OTHER_LDFLAGS": [
+          "-ObjC",
+          "-lc++"
+        ],
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.facebook.REACT.TestProject-tvOS",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "SDKROOT": "appletvos"
+      },
+      "name": "Debug"
+    },
+    "78C398B81ACF4ADC00677621": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "78C398B01ACF4ADC00677621",
+      "remoteGlobalIDString": "134814201AA4EA6300B7C361",
+      "remoteInfo": "RCTLinking",
+      "proxyType": "2"
+    },
+    "139105C61AF99C1200B5F7CC": {
+      "isa": "PBXBuildFile",
+      "fileRef": "139105C11AF99BAD00B5F7CC"
+    },
+    "3DAD3E941DF850E9000B6D8A": {
+      "path": "libRCTText-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3E931DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "3DAD3EA31DF850E9000B6D8A": {
+      "path": "libReact.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EA21DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "2D02E4C91E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3EA31DF850E9000B6D8A"
+    },
+    "139FDEE61B06529A00C62182": {
+      "path": "..\/node_modules\/react-native\/Libraries\/WebSocket\/RCTWebSocket.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTWebSocket.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "00C302C01ABCB91800DB3ED1": {
+      "path": "libRCTImage.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "00C302BF1ABCB91800DB3ED1",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "83CBB9F61A601CBA00E9B192": {
+      "tabWidth": "2",
+      "isa": "PBXGroup",
+      "indentWidth": "2",
+      "children": [
+        "13B07FAE1A68108700A75B9A",
+        "832341AE1AAA6A7D00B99B32",
+        "00E356EF1AD99517003FC87E",
+        "83CBBA001A601CBA00E9B192"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E4C71E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3E941DF850E9000B6D8A"
+    },
+    "3DAD3E901DF850E9000B6D8A": {
+      "path": "libRCTSettings-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3E8F1DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "2D02E4C51E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3E8C1DF850E9000B6D8A"
+    },
+    "13B07FC11A68108700A75B9A": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB71A68108700A75B9A"
+    },
+    "78C398B01ACF4ADC00677621": {
+      "path": "..\/node_modules\/react-native\/Libraries\/LinkingIOS\/RCTLinking.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTLinking.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "2D02E4C31E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3E841DF850E9000B6D8A"
+    },
+    "5E91572E1DD0AC6500FF2AA8": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "5E9157331DD0AC6500FF2AA8",
+        "5E9157351DD0AC6500FF2AA8"
+      ],
+      "sourceTree": "<group>"
+    },
+    "140ED2AC1D01E1AD002B40FF": {
+      "isa": "PBXBuildFile",
+      "fileRef": "146834041AC3E56700842450"
+    },
+    "2D02E4CB1E0B4B27006451C7": {
+      "inputPaths": [],
+      "buildActionMask": "2147483647",
+      "shellPath": "\/bin\/sh",
+      "isa": "PBXShellScriptBuildPhase",
+      "outputPaths": [],
+      "runOnlyForDeploymentPostprocessing": "0",
+      "shellScript": "export NODE_BINARY=node\n..\/node_modules\/react-native\/packager\/react-native-xcode.sh",
+      "files": [],
+      "name": "Bundle React Native Code And Images"
+    },
+    "00C302D31ABCB9D200DB3ED1": {
+      "path": "..\/node_modules\/react-native\/Libraries\/Network\/RCTNetwork.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTNetwork.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "00E356EF1AD99517003FC87E": {
+      "path": "TestProjectTests",
+      "isa": "PBXGroup",
+      "children": [
+        "00E356F21AD99517003FC87E",
+        "00E356F01AD99517003FC87E"
+      ],
+      "sourceTree": "<group>"
+    },
+    "00E356ED1AD99517003FC87E": {
+      "buildConfigurationList": "00E357021AD99517003FC87E",
+      "productReference": "00E356EE1AD99517003FC87E",
+      "productType": "com.apple.product-type.bundle.unit-test",
+      "productName": "TestProjectTests",
+      "isa": "PBXNativeTarget",
+      "buildPhases": [
+        "00E356EA1AD99517003FC87E",
+        "00E356EB1AD99517003FC87E",
+        "00E356EC1AD99517003FC87E"
+      ],
+      "dependencies": [
+        "00E356F51AD99517003FC87E"
+      ],
+      "name": "TestProjectTests",
+      "buildRules": []
+    },
+    "2D02E4BD1E0B4A84006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB51A68108700A75B9A"
+    },
+    "00C302E31ABCB9EE00DB3ED1": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302DF1ABCB9EE00DB3ED1",
+      "remoteGlobalIDString": "832C81801AAF6DEF007FA2F7",
+      "remoteInfo": "RCTVibration",
+      "proxyType": "2"
+    },
+    "00E356EB1AD99517003FC87E": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "140ED2AC1D01E1AD002B40FF"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "5E9157331DD0AC6500FF2AA8": {
+      "path": "libRCTAnimation.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "5E9157321DD0AC6500FF2AA8",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00E356F41AD99517003FC87E": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "83CBB9F71A601CBA00E9B192",
+      "remoteGlobalIDString": "13B07F861A680F5B00A75B9A",
+      "remoteInfo": "TestProject",
+      "proxyType": "1"
+    },
+    "00E356F21AD99517003FC87E": {
+      "path": "TestProjectTests.m",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.c.objc",
+      "sourceTree": "<group>"
+    },
+    "83CBBA001A601CBA00E9B192": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "13B07F961A680F5B00A75B9A",
+        "00E356EE1AD99517003FC87E",
+        "2D02E47B1E0B4A5D006451C7",
+        "2D02E4901E0B4A5D006451C7"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E4BC1E0B4A80006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB01A68108700A75B9A"
+    },
+    "00E356F01AD99517003FC87E": {
+      "isa": "PBXGroup",
+      "name": "Supporting Files",
+      "children": [
+        "00E356F11AD99517003FC87E"
+      ],
+      "sourceTree": "<group>"
+    },
+    "832341AE1AAA6A7D00B99B32": {
+      "isa": "PBXGroup",
+      "name": "Libraries",
+      "children": [
+        "5E91572D1DD0AC6500FF2AA8",
+        "146833FF1AC3E56700842450",
+        "00C302A71ABCB8CE00DB3ED1",
+        "00C302B51ABCB90400DB3ED1",
+        "00C302BB1ABCB91800DB3ED1",
+        "78C398B01ACF4ADC00677621",
+        "00C302D31ABCB9D200DB3ED1",
+        "139105B61AF99BAD00B5F7CC",
+        "832341B01AAA6A8300B99B32",
+        "00C302DF1ABCB9EE00DB3ED1",
+        "139FDEE61B06529A00C62182"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E4BB1E0B4A5E006451C7": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "2D02E4991E0B4A5E006451C7",
+        "2D02E49A1E0B4A5E006451C7"
+      ]
+    },
+    "2D02E4BF1E0B4AB3006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB71A68108700A75B9A"
+    },
+    "139105C11AF99BAD00B5F7CC": {
+      "path": "libRCTSettings.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "139105C01AF99BAD00B5F7CC",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302BA1ABCB90400DB3ED1": {
+      "path": "libRCTGeolocation.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "00C302B91ABCB90400DB3ED1",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "13B07F861A680F5B00A75B9A": {
+      "buildConfigurationList": "13B07F931A680F5B00A75B9A",
+      "productReference": "13B07F961A680F5B00A75B9A",
+      "productType": "com.apple.product-type.application",
+      "productName": "Hello World",
+      "isa": "PBXNativeTarget",
+      "buildPhases": [
+        "13B07F871A680F5B00A75B9A",
+        "13B07F8C1A680F5B00A75B9A",
+        "13B07F8E1A680F5B00A75B9A",
+        "00DD1BFF1BD5951E006B06BC"
+      ],
+      "dependencies": [],
+      "name": "TestProject",
+      "buildRules": []
+    },
+    "2D02E47A1E0B4A5D006451C7": {
+      "buildConfigurationList": "2D02E4BA1E0B4A5E006451C7",
+      "productReference": "2D02E47B1E0B4A5D006451C7",
+      "productType": "com.apple.product-type.application",
+      "productName": "TestProject-tvOS",
+      "isa": "PBXNativeTarget",
+      "buildPhases": [
+        "2D02E4771E0B4A5D006451C7",
+        "2D02E4781E0B4A5D006451C7",
+        "2D02E4791E0B4A5D006451C7",
+        "2D02E4CB1E0B4B27006451C7"
+      ],
+      "dependencies": [],
+      "name": "TestProject-tvOS",
+      "buildRules": []
+    },
+    "2D02E4921E0B4A5D006451C7": {
+      "isa": "PBXTargetDependency",
+      "target": "2D02E47A1E0B4A5D006451C7",
+      "targetProxy": "2D02E4911E0B4A5D006451C7"
+    },
+    "139105B71AF99BAD00B5F7CC": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "139105C11AF99BAD00B5F7CC",
+        "3DAD3E901DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "2D02E4901E0B4A5D006451C7": {
+      "path": "TestProject-tvOSTests.xctest",
+      "isa": "PBXFileReference",
+      "includeInIndex": "0",
+      "explicitFileType": "wrapper.cfbundle",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "83CBB9FA1A601CBA00E9B192": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "83CBBA201A601CBA00E9B192",
+        "83CBBA211A601CBA00E9B192"
+      ]
+    },
+    "00C302B91ABCB90400DB3ED1": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302B51ABCB90400DB3ED1",
+      "remoteGlobalIDString": "134814201AA4EA6300B7C361",
+      "remoteInfo": "RCTGeolocation",
+      "proxyType": "2"
+    },
+    "3DAD3EA81DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "3D3CD9251DE5FBEC00167DC4",
+      "remoteInfo": "cxxreact",
+      "proxyType": "2"
+    },
+    "13B07FBF1A68108700A75B9A": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB51A68108700A75B9A"
+    },
+    "00C302BC1ABCB91800DB3ED1": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "00C302C01ABCB91800DB3ED1",
+        "3DAD3E841DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "3DAD3EA61DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "3D3C06751DE3340C00C268FA",
+      "remoteInfo": "yoga-tvOS",
+      "proxyType": "2"
+    },
+    "13B07FBD1A68108700A75B9A": {
+      "isa": "PBXBuildFile",
+      "fileRef": "13B07FB11A68108700A75B9A"
+    },
+    "3DAD3E8C1DF850E9000B6D8A": {
+      "path": "libRCTNetwork-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3E8B1DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302B51ABCB90400DB3ED1": {
+      "path": "..\/node_modules\/react-native\/Libraries\/Geolocation\/RCTGeolocation.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTGeolocation.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "3DAD3EA41DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "3D3C059A1DE3340900C268FA",
+      "remoteInfo": "yoga",
+      "proxyType": "2"
+    },
+    "00C302A71ABCB8CE00DB3ED1": {
+      "path": "..\/node_modules\/react-native\/Libraries\/ActionSheetIOS\/RCTActionSheet.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTActionSheet.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "3DAD3EA21DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "146833FF1AC3E56700842450",
+      "remoteGlobalIDString": "2D2A28131D9B038B00D4039D",
+      "remoteInfo": "React-tvOS",
+      "proxyType": "2"
+    },
+    "832341B41AAA6A8300B99B32": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "832341B01AAA6A8300B99B32",
+      "remoteGlobalIDString": "58B5119B1A9E6C1200147676",
+      "remoteInfo": "RCTText",
+      "proxyType": "2"
+    },
+    "83CBB9F71A601CBA00E9B192": {
+      "projectReferences": [
+        {
+          "ProjectRef": "00C302A71ABCB8CE00DB3ED1",
+          "ProductGroup": "00C302A81ABCB8CE00DB3ED1"
+        },
+        {
+          "ProjectRef": "5E91572D1DD0AC6500FF2AA8",
+          "ProductGroup": "5E91572E1DD0AC6500FF2AA8"
+        },
+        {
+          "ProjectRef": "00C302B51ABCB90400DB3ED1",
+          "ProductGroup": "00C302B61ABCB90400DB3ED1"
+        },
+        {
+          "ProjectRef": "00C302BB1ABCB91800DB3ED1",
+          "ProductGroup": "00C302BC1ABCB91800DB3ED1"
+        },
+        {
+          "ProjectRef": "78C398B01ACF4ADC00677621",
+          "ProductGroup": "78C398B11ACF4ADC00677621"
+        },
+        {
+          "ProjectRef": "00C302D31ABCB9D200DB3ED1",
+          "ProductGroup": "00C302D41ABCB9D200DB3ED1"
+        },
+        {
+          "ProjectRef": "139105B61AF99BAD00B5F7CC",
+          "ProductGroup": "139105B71AF99BAD00B5F7CC"
+        },
+        {
+          "ProjectRef": "832341B01AAA6A8300B99B32",
+          "ProductGroup": "832341B11AAA6A8300B99B32"
+        },
+        {
+          "ProjectRef": "00C302DF1ABCB9EE00DB3ED1",
+          "ProductGroup": "00C302E01ABCB9EE00DB3ED1"
+        },
+        {
+          "ProjectRef": "139FDEE61B06529A00C62182",
+          "ProductGroup": "139FDEE71B06529A00C62182"
+        },
+        {
+          "ProjectRef": "146833FF1AC3E56700842450",
+          "ProductGroup": "146834001AC3E56700842450"
+        }
+      ],
+      "buildConfigurationList": "83CBB9FA1A601CBA00E9B192",
+      "targets": [
+        "13B07F861A680F5B00A75B9A",
+        "00E356ED1AD99517003FC87E",
+        "2D02E47A1E0B4A5D006451C7",
+        "2D02E48F1E0B4A5D006451C7"
+      ],
+      "developmentRegion": "English",
+      "knownRegions": [
+        "en",
+        "Base"
+      ],
+      "isa": "PBXProject",
+      "compatibilityVersion": "Xcode 3.2",
+      "productRefGroup": "83CBBA001A601CBA00E9B192",
+      "projectDirPath": "",
+      "attributes": {
+        "LastUpgradeCheck": "0610",
+        "TargetAttributes": {
+          "00E356ED1AD99517003FC87E": {
+            "TestTargetID": "13B07F861A680F5B00A75B9A",
+            "CreatedOnToolsVersion": "6.2"
+          },
+          "2D02E47A1E0B4A5D006451C7": {
+            "ProvisioningStyle": "Automatic",
+            "CreatedOnToolsVersion": "8.2.1"
+          },
+          "2D02E48F1E0B4A5D006451C7": {
+            "TestTargetID": "2D02E47A1E0B4A5D006451C7",
+            "ProvisioningStyle": "Automatic",
+            "CreatedOnToolsVersion": "8.2.1"
+          }
+        },
+        "ORGANIZATIONNAME": "Facebook"
+      },
+      "hasScannedForEncodings": "0",
+      "mainGroup": "83CBB9F61A601CBA00E9B192",
+      "projectRoot": ""
+    },
+    "2D02E4C61E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3E901DF850E9000B6D8A"
+    },
+    "00C302DF1ABCB9EE00DB3ED1": {
+      "path": "..\/node_modules\/react-native\/Libraries\/Vibration\/RCTVibration.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTVibration.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "832341B01AAA6A8300B99B32": {
+      "path": "..\/node_modules\/react-native\/Libraries\/Text\/RCTText.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTText.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "2D02E4C41E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "3DAD3E881DF850E9000B6D8A"
+    },
+    "2D02E4C21E0B4AEC006451C7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "5E9157351DD0AC6500FF2AA8"
+    },
+    "146834041AC3E56700842450": {
+      "path": "libReact.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "146834031AC3E56700842450",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "3DAD3E871DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "78C398B01ACF4ADC00677621",
+      "remoteGlobalIDString": "2D2A28471D9B043800D4039D",
+      "remoteInfo": "RCTLinking-tvOS",
+      "proxyType": "2"
+    },
+    "5E91572D1DD0AC6500FF2AA8": {
+      "path": "..\/node_modules\/react-native\/Libraries\/NativeAnimation\/RCTAnimation.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTAnimation.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "00C302D41ABCB9D200DB3ED1": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "00C302DC1ABCB9D200DB3ED1",
+        "3DAD3E8C1DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "13B07FB61A68108700A75B9A": {
+      "path": "TestProject\/Info.plist",
+      "isa": "PBXFileReference",
+      "sourceTree": "<group>",
+      "name": "Info.plist",
+      "fileEncoding": "4",
+      "lastKnownFileType": "text.plist.xml"
+    },
+    "00E356EE1AD99517003FC87E": {
+      "path": "TestProjectTests.xctest",
+      "isa": "PBXFileReference",
+      "includeInIndex": "0",
+      "explicitFileType": "wrapper.cfbundle",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "146834001AC3E56700842450": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "146834041AC3E56700842450",
+        "3DAD3EA31DF850E9000B6D8A",
+        "3DAD3EA51DF850E9000B6D8A",
+        "3DAD3EA71DF850E9000B6D8A",
+        "3DAD3EA91DF850E9000B6D8A",
+        "3DAD3EAB1DF850E9000B6D8A",
+        "3DAD3EAD1DF850E9000B6D8A",
+        "3DAD3EAF1DF850E9000B6D8A"
+      ],
+      "sourceTree": "<group>"
+    },
+    "3DAD3E831DF850E9000B6D8A": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302BB1ABCB91800DB3ED1",
+      "remoteGlobalIDString": "2D2A283A1D9B042B00D4039D",
+      "remoteInfo": "RCTImage-tvOS",
+      "proxyType": "2"
+    },
+    "83CBBA211A601CBA00E9B192": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "CLANG_WARN_ENUM_CONVERSION": "YES",
+        "GCC_WARN_UNUSED_VARIABLE": "YES",
+        "VALIDATE_PRODUCT": "YES",
+        "GCC_WARN_ABOUT_RETURN_TYPE": "YES_ERROR",
+        "CLANG_ENABLE_MODULES": "YES",
+        "CLANG_CXX_LANGUAGE_STANDARD": "gnu++0x",
+        "GCC_WARN_UNINITIALIZED_AUTOS": "YES_AGGRESSIVE",
+        "CLANG_WARN_INT_CONVERSION": "YES",
+        "MTL_ENABLE_DEBUG_INFO": "NO",
+        "CLANG_WARN_CONSTANT_CONVERSION": "YES",
+        "GCC_C_LANGUAGE_STANDARD": "gnu99",
+        "CLANG_WARN__DUPLICATE_METHOD_MATCH": "YES",
+        "CLANG_WARN_EMPTY_BODY": "YES",
+        "GCC_WARN_64_TO_32_BIT_CONVERSION": "YES",
+        "ALWAYS_SEARCH_USER_PATHS": "NO",
+        "COPY_PHASE_STRIP": "YES",
+        "CLANG_ENABLE_OBJC_ARC": "YES",
+        "CLANG_WARN_BOOL_CONVERSION": "YES",
+        "CLANG_WARN_DIRECT_OBJC_ISA_USAGE": "YES_ERROR",
+        "GCC_WARN_UNUSED_FUNCTION": "YES",
+        "CLANG_WARN_OBJC_ROOT_CLASS": "YES_ERROR",
+        "CODE_SIGN_IDENTITY[sdk=iphoneos*]": "iPhone Developer",
+        "ENABLE_NS_ASSERTIONS": "NO",
+        "IPHONEOS_DEPLOYMENT_TARGET": "8.0",
+        "SDKROOT": "iphoneos",
+        "CLANG_CXX_LIBRARY": "libc++",
+        "ENABLE_STRICT_OBJC_MSGSEND": "YES",
+        "CLANG_WARN_UNREACHABLE_CODE": "YES",
+        "GCC_WARN_UNDECLARED_SELECTOR": "YES"
+      },
+      "name": "Release"
+    },
+    "00E356EC1AD99517003FC87E": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "13B07FB21A68108700A75B9A": {
+      "path": "Base.lproj\/LaunchScreen.xib",
+      "isa": "PBXFileReference",
+      "name": "Base",
+      "lastKnownFileType": "file.xib",
+      "sourceTree": "<group>"
+    },
+    "00C302E01ABCB9EE00DB3ED1": {
+      "isa": "PBXGroup",
+      "name": "Products",
+      "children": [
+        "00C302E41ABCB9EE00DB3ED1"
+      ],
+      "sourceTree": "<group>"
+    },
+    "00E356EA1AD99517003FC87E": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "00E356F31AD99517003FC87E"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "13B07FB01A68108700A75B9A": {
+      "path": "TestProject\/AppDelegate.m",
+      "isa": "PBXFileReference",
+      "sourceTree": "<group>",
+      "name": "AppDelegate.m",
+      "fileEncoding": "4",
+      "lastKnownFileType": "sourcecode.c.objc"
+    },
+    "2D02E48E1E0B4A5D006451C7": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "5E9157351DD0AC6500FF2AA8": {
+      "path": "libRCTAnimation-tvOS.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "5E9157341DD0AC6500FF2AA8",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "139FDEF61B0652A700C62182": {
+      "isa": "PBXBuildFile",
+      "fileRef": "139FDEF41B06529B00C62182"
+    },
+    "2D02E48C1E0B4A5D006451C7": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "2DCD954D1E0B4F2C00145EB5"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "00E356F61AD99517003FC87E": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "IPHONEOS_DEPLOYMENT_TARGET": "8.0",
+        "TEST_HOST": "$(BUILT_PRODUCTS_DIR)\/TestProject.app\/TestProject",
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE": "TestProjectTests\/Info.plist",
+        "OTHER_LDFLAGS": [
+          "-ObjC",
+          "-lc++"
+        ],
+        "BUNDLE_LOADER": "$(TEST_HOST)",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "GCC_PREPROCESSOR_DEFINITIONS": [
+          "DEBUG=1",
+          "$(inherited)"
+        ]
+      },
+      "name": "Debug"
+    },
+    "13B07F961A680F5B00A75B9A": {
+      "path": "TestProject.app",
+      "isa": "PBXFileReference",
+      "includeInIndex": "0",
+      "explicitFileType": "wrapper.application",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "139FDEF31B06529B00C62182": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "139FDEE61B06529A00C62182",
+      "remoteGlobalIDString": "3C86DF461ADF2C930047B81A",
+      "remoteInfo": "RCTWebSocket",
+      "proxyType": "2"
+    },
+    "13B07F941A680F5B00A75B9A": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "DEAD_CODE_STRIPPING": "NO",
+        "LD_RUNPATH_SEARCH_PATHS": "$(inherited) @executable_path\/Frameworks",
+        "INFOPLIST_FILE": "TestProject\/Info.plist",
+        "OTHER_LDFLAGS": [
+          "$(inherited)",
+          "-ObjC",
+          "-lc++"
+        ],
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "VERSIONING_SYSTEM": "apple-generic",
+        "CURRENT_PROJECT_VERSION": "1",
+        "PRODUCT_NAME": "TestProject"
+      },
+      "name": "Debug"
+    },
+    "13B07F871A680F5B00A75B9A": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "13B07FBC1A68108700A75B9A",
+        "13B07FC11A68108700A75B9A"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "2D02E47B1E0B4A5D006451C7": {
+      "path": "TestProject-tvOS.app",
+      "isa": "PBXFileReference",
+      "includeInIndex": "0",
+      "explicitFileType": "wrapper.application",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302EA1ABCBA2D00DB3ED1": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00C302E41ABCB9EE00DB3ED1"
+    },
+    "3DAD3EAF1DF850E9000B6D8A": {
+      "path": "libjschelpers.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EAE1DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "2D02E4911E0B4A5D006451C7": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "83CBB9F71A601CBA00E9B192",
+      "remoteGlobalIDString": "2D02E47A1E0B4A5D006451C7",
+      "remoteInfo": "TestProject-tvOS",
+      "proxyType": "1"
+    },
+    "139105B61AF99BAD00B5F7CC": {
+      "path": "..\/node_modules\/react-native\/Libraries\/Settings\/RCTSettings.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTSettings.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "3DAD3EAD1DF850E9000B6D8A": {
+      "path": "libjschelpers.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EAC1DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302BF1ABCB91800DB3ED1": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "00C302BB1ABCB91800DB3ED1",
+      "remoteGlobalIDString": "58B5115D1A9E6B3D00147676",
+      "remoteInfo": "RCTImage",
+      "proxyType": "2"
+    },
+    "3DAD3EAB1DF850E9000B6D8A": {
+      "path": "libcxxreact.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "3DAD3EAA1DF850E9000B6D8A",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302AC1ABCB8CE00DB3ED1": {
+      "path": "libRCTActionSheet.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "00C302AB1ABCB8CE00DB3ED1",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302BB1ABCB91800DB3ED1": {
+      "path": "..\/node_modules\/react-native\/Libraries\/Image\/RCTImage.xcodeproj",
+      "isa": "PBXFileReference",
+      "name": "RCTImage.xcodeproj",
+      "lastKnownFileType": "wrapper.pb-project",
+      "sourceTree": "<group>"
+    },
+    "00C302E91ABCBA2D00DB3ED1": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00C302DC1ABCB9D200DB3ED1"
+    },
+    "2D02E4781E0B4A5D006451C7": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "2D02E4C91E0B4AEC006451C7",
+        "2D02E4C21E0B4AEC006451C7",
+        "2D02E4C31E0B4AEC006451C7",
+        "2D02E4C41E0B4AEC006451C7",
+        "2D02E4C51E0B4AEC006451C7",
+        "2D02E4C61E0B4AEC006451C7",
+        "2D02E4C71E0B4AEC006451C7",
+        "2D02E4C81E0B4AEC006451C7"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "00C302E71ABCBA2D00DB3ED1": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00C302BA1ABCB90400DB3ED1"
+    },
+    "133E29F31AD74F7200F7D852": {
+      "isa": "PBXBuildFile",
+      "fileRef": "78C398B91ACF4ADC00677621"
+    },
+    "832341B51AAA6A8300B99B32": {
+      "path": "libRCTText.a",
+      "isa": "PBXReferenceProxy",
+      "fileType": "archive.ar",
+      "remoteRef": "832341B41AAA6A8300B99B32",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "00C302E51ABCBA2D00DB3ED1": {
+      "isa": "PBXBuildFile",
+      "fileRef": "00C302AC1ABCB8CE00DB3ED1"
+    }
+  },
+  "rootObject": "83CBB9F71A601CBA00E9B192"
+}
