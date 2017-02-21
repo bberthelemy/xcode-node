@@ -16,7 +16,7 @@ function getUids(xcode) {
   return uids;
 }
 
-export function pbx_uid(xcode) {
+function pbx_uid(xcode) {
   const uids = getUids(xcode);
   let uid = null;
 
@@ -26,3 +26,7 @@ export function pbx_uid(xcode) {
 
   return uid;
 }
+
+export default {
+  pbx_uid
+};
