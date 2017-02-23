@@ -11,7 +11,7 @@ export default class Configuration {
    * @param target The name of the target
    * @returns {*} The configuration list (ref) or null if error
    */
-  getTargetConfigurations(target) {
+  getTargetConfigurations(target:string) {
     const targets = this.xcode.project.objects.PBXNativeTarget;
 
     for (const i in targets) {
@@ -34,7 +34,7 @@ export default class Configuration {
    * @param name The name of the configuration
    * @returns {*} The configuration (ref) of null if error
    */
-  getTargetConfiguration(target, name) {
+  getTargetConfiguration(target:string, name:string) {
     const configurations = this.getTargetConfigurations(target);
 
     if (configurations) {
@@ -72,7 +72,7 @@ export default class Configuration {
    * @param name The name of the configuration
    * @returns {*} The configuration (ref) or null if error
    */
-  getProjectConfiguration(name) {
+  getProjectConfiguration(name:string) {
     const configurations = this.getProjectConfigurations();
     const values = configurations.buildConfigurations.map((item) => item.value);
 
@@ -92,7 +92,7 @@ export default class Configuration {
    * @param oldConfig The name of the configuration to duplicate
    * @param newConfig The new name of duplicated configuraton
    */
-  duplicateConfiguration(oldConfig, newConfig) {
+  duplicateConfiguration(oldConfig:string, newConfig:string) {
     this.duplicateProjectConfiguration(oldConfig, newConfig);
 
     const targets = this.xcode.project.objects.PBXNativeTarget;
@@ -115,7 +115,7 @@ export default class Configuration {
    * @param newConfig The new name of duplicated configuraton
    * @returns {*} The new duplicated configuration (ref) or null if error
    */
-  duplicateTargetConfiguration(target, oldConfig, newConfig) {
+  duplicateTargetConfiguration(target:string, oldConfig:string, newConfig:string) {
     const key = Utils.pbx_uid(this.xcode);
     const keyComment = `${key}_comment`;
 
@@ -142,7 +142,7 @@ export default class Configuration {
    * @param newConfig The new name of duplicated configuraton
    * @returns {*} The new duplicated configuration (ref) or null if error
    */
-  duplicateProjectConfiguration(oldConfig, newConfig) {
+  duplicateProjectConfiguration(oldConfig:string, newConfig:string) {
     const key = Utils.pbx_uid(this.xcode);
     const keyComment = `${key}_comment`;
     const config = JSON.parse(JSON.stringify(this.getProjectConfiguration(oldConfig)));
@@ -155,5 +155,72 @@ export default class Configuration {
     this.xcode.project.objects.XCBuildConfiguration[keyComment] = newConfig;
 
     return this.xcode.project.objects.XCBuildConfiguration[key];
+  }
+
+  /**
+   * Set a user-defined configuration variable for a specific target configuration
+   *
+   * @param target The name of the target
+   * @param config The name of the configuration
+   * @param key The usef defined variable name
+   * @param value The user defined variable value
+   */
+  setUserDefinedTargetConfiguration(target:string, config:string, key:string, value:string) {
+    const conf = this.getTargetConfiguration(target, config);
+    const val = `"${value}"`;
+
+    conf.buildSettings[key] = val;
+  }
+
+  /**
+   * Set a user-defined configuration variable for a specific target (including all configurations)
+   *
+   * @param target The name of the target
+   * @param config The name of the configuration
+   * @param key The usef defined variable name
+   * @param value The user defined variable value
+   */
+  setUserDefinedTarget(target:string, key:string, value:string) {
+    const configs = this.getTargetConfigurations(target);
+    const val = `"${value}"`;
+
+    configs && configs.buildConfigurations.forEach((it) => {
+      const conf = this.xcode.project.objects.XCBuildConfiguration[it.value];
+      conf.buildSettings[key] = val;
+    });
+  }
+
+  /**
+   * Set the headers' search paths for a specific target configuration
+   *
+   * @param target The name of the target
+   * @param config The name of the configuration
+   * @param values The headers' search path array
+   */
+  setHeadersPathTargetConfiguration(target:string, config:string, values:Array) {
+    const conf = this.getTargetConfiguration(target, config);
+    const val = values.map((it) => {
+      return `"${it}"`;
+    });
+
+    conf.buildSettings['HEADER_SEARCH_PATHS'] = val;
+  }
+
+  /**
+   * Set the headers' search paths for a specific target (including all configurations)
+   *
+   * @param target The name of the target
+   * @param values The headers' search path array
+   */
+  setHeadersPathTarget(target:string, values:Array) {
+    const configs = this.getTargetConfigurations(target);
+    const val = values.map((it) => {
+      return `"${it}"`;
+    });
+
+    configs && configs.buildConfigurations.forEach((it) => {
+      const conf = this.xcode.project.objects.XCBuildConfiguration[it.value];
+      conf.buildSettings['HEADER_SEARCH_PATHS'] = val;
+    });
   }
 };

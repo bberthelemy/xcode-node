@@ -79,7 +79,6 @@ export default class Project {
   }
 }
 
-const project = new Project('project.pbxproj');
+// const project = new Project('project.pbxproj');
+//
 // project.save('project.new.pbxproj');
-
-console.log("Project: " + project);
