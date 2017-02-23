@@ -24,7 +24,7 @@ export default class Project {
   /**
    * Get a specific project's target by name
    *
-   * @param name The name of the target
+   * @param {string} name The name of the target
    * @returns {*} The target (ref) or null if error
    */
   getTarget(name) {
@@ -61,7 +61,7 @@ export default class Project {
   /**
    * Save all modifications
    *
-   * @param path The new project path (not required)
+   * @param {string} path The new project path (not required)
    */
   save(path) {
     const newPath = (path) ? path : this.projectPath;

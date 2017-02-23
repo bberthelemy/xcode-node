@@ -7,7 +7,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "node_modules/.bin/babel src --out-dir lib"
+    "prepublish": "node_modules/.bin/babel src --out-dir lib",
+    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "assert": "^1.4.1",
@@ -19,10 +20,14 @@
     "babel-core": "^6.23.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-2": "^6.22.0"
+    "babel-preset-stage-2": "^6.22.0",
+    "docdash": "^0.4.0",
+    "jsdoc": "^3.4.3"
   },
   "babel": {
-    "plugins": ["transform-flow-strip-types"],
+    "plugins": [
+      "transform-flow-strip-types"
+    ],
     "presets": [
       "es2015",
       "stage-2"
