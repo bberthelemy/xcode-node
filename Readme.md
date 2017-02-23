@@ -9,6 +9,9 @@ A node js module to handle and manipulate iOS .pbxproj files easily.
 
 (not yet on npmjs, for now just clone this repository)
 
+## Documentation
+[https://bberthelemy.github.io/xcode-node]()
+
 ## Build and run from sources
 ```
 $ npm run prepublish
