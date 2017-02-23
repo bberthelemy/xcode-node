@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#duplicateConfiguration">duplicateConfiguration</a></li><li><a href="global.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li><a href="global.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li><a href="global.html#getProjectConfiguration">getProjectConfiguration</a></li><li><a href="global.html#getProjectConfigurations">getProjectConfigurations</a></li><li><a href="global.html#getTarget">getTarget</a></li><li><a href="global.html#getTargetConfiguration">getTargetConfiguration</a></li><li><a href="global.html#getTargetConfigurations">getTargetConfigurations</a></li><li><a href="global.html#getTargets">getTargets</a></li><li><a href="global.html#save">save</a></li><li><a href="global.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li><a href="global.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li><a href="global.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li><a href="global.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li><li><a href="global.html#toString">toString</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Configuration.html">Configuration</a><ul class='methods'><li data-type='method'><a href="Configuration.html#duplicateConfiguration">duplicateConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfiguration">getProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfigurations">getProjectConfigurations</a></li><li data-type='method'><a href="Configuration.html#getTargetConfiguration">getTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getTargetConfigurations">getTargetConfigurations</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li></ul></li><li><a href="Project.html">Project</a><ul class='methods'><li data-type='method'><a href="Project.html#getTarget">getTarget</a></li><li data-type='method'><a href="Project.html#getTargets">getTargets</a></li><li data-type='method'><a href="Project.html#save">save</a></li><li data-type='method'><a href="Project.html#toString">toString</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -41,15 +41,10 @@
 import fs from "fs";
 import Configuration from "./configuration";
 
-// process.stdout.write(myProj.writeSync());
-
-// console.log(pbx_uid(myProj.hash));
-
-//console.log(myProj.hash.project.objects.XCBuildConfiguration);
-// console.log(myProj.hash.project.objects.XCConfigurationList);
-// console.log(Object.keys(myProj.hash.project.objects.XCConfigurationList).length);
-
-export default class Project {
+/**
+ * Base class to handle pbxproj file and basic project informations
+ */
+class Project {
   constructor(path) {
     this.projectPath = path;
     this.myProj = Xcode.project(this.projectPath);
@@ -62,6 +57,15 @@ export default class Project {
 
   /**
    * Get a specific project's target by name
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const target = project.getTarget("TestProject");
+   * console.log(target);
+   *
+   * project.getTargets().forEach((tg) => {
+   *   console.log(project.getTarget(tg.name));
+   * });
    *
    * @param {string} name The name of the target
    * @returns {*} The target (ref) or null if error
@@ -83,6 +87,11 @@ export default class Project {
   /**
    * Get all project's targets
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const targets = project.getTargets();
+   * console.log(targets);
+   *
    * @returns {Array} The targets (copy)
    */
   getTargets() {
@@ -100,6 +109,11 @@ export default class Project {
   /**
    * Save all modifications
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * project.save();
+   * project.save("project_second.pbxproj");
+   *
    * @param {string} path The new project path (not required)
    */
   save(path) {
@@ -111,6 +125,10 @@ export default class Project {
   /**
    * Return project as string (can be usefull to make bash redirections and other manipulations)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * process.stdout.write(project.toString());
+   *
    * @returns {string}
    */
   toString() {
@@ -118,9 +136,7 @@ export default class Project {
   }
 }
 
-// const project = new Project('project.pbxproj');
-//
-// project.save('project.new.pbxproj');
+export default Project;
 </code></pre>
         </article>
     </section>
@@ -133,7 +149,7 @@ export default class Project {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Feb 23 2017 23:19:34 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Feb 24 2017 00:06:11 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

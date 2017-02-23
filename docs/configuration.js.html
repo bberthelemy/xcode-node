@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#duplicateConfiguration">duplicateConfiguration</a></li><li><a href="global.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li><a href="global.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li><a href="global.html#getProjectConfiguration">getProjectConfiguration</a></li><li><a href="global.html#getProjectConfigurations">getProjectConfigurations</a></li><li><a href="global.html#getTarget">getTarget</a></li><li><a href="global.html#getTargetConfiguration">getTargetConfiguration</a></li><li><a href="global.html#getTargetConfigurations">getTargetConfigurations</a></li><li><a href="global.html#getTargets">getTargets</a></li><li><a href="global.html#save">save</a></li><li><a href="global.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li><a href="global.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li><a href="global.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li><a href="global.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li><li><a href="global.html#toString">toString</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Configuration.html">Configuration</a><ul class='methods'><li data-type='method'><a href="Configuration.html#duplicateConfiguration">duplicateConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfiguration">getProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfigurations">getProjectConfigurations</a></li><li data-type='method'><a href="Configuration.html#getTargetConfiguration">getTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getTargetConfigurations">getTargetConfigurations</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li></ul></li><li><a href="Project.html">Project</a><ul class='methods'><li data-type='method'><a href="Project.html#getTarget">getTarget</a></li><li data-type='method'><a href="Project.html#getTargets">getTargets</a></li><li data-type='method'><a href="Project.html#save">save</a></li><li data-type='method'><a href="Project.html#toString">toString</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -39,13 +39,25 @@
         <article>
             <pre class="prettyprint source linenums"><code>import Utils from "./utils";
 
-export default class Configuration {
+/**
+ * Configuration handler to manipulate build configurations for project and targets
+ */
+class Configuration {
   constructor(xcode) {
     this.xcode = xcode;
   }
 
   /**
    * Get a specific target configuration list
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   const targetConfiguration = project.configuration.getTargetConfigurations(tg.name);
+   *
+   *   console.log(targetConfiguration);
+   * });
    *
    * @param {string} target The name of the target
    * @returns {*} The configuration list (ref) or null if error
@@ -68,6 +80,17 @@ export default class Configuration {
 
   /**
    * Get a specific target configuration
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   const targetConfigurationDebug = project.configuration.getTargetConfigurations(tg.name, "Debug");
+   *   const targetConfigurationRelease = project.configuration.getTargetConfigurations(tg.name, "Release");
+   *
+   *   console.log(targetConfigurationDebug);
+   *   console.log(targetConfigurationRelease);
+   * });
    *
    * @param {string} target The name of the target
    * @param {string} name The name of the configuration
@@ -93,6 +116,12 @@ export default class Configuration {
   /**
    * Get the project configuration list
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const projectConfigurations = project.configuration.getProjectConfigurations();
+   *
+   * console.log(projectConfigurations);
+   *
    * @returns {*} The configuration list (ref) or null if error
    */
   getProjectConfigurations() {
@@ -107,6 +136,12 @@ export default class Configuration {
 
   /**
    * Get a configuration by name
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const projectConfigurationRelease = project.configuration.getProjectConfiguration("Release");
+   *
+   * console.log(projectConfigurationRelease);
    *
    * @param {string} name The name of the configuration
    * @returns {*} The configuration (ref) or null if error
@@ -128,6 +163,13 @@ export default class Configuration {
   /**
    * Duplicate a configuration by name (project + all targets)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.configuration.duplicateConfiguration("Release", "Staging");
+   *
+   * const projectConfigurationStaging = project.configuration.getProjectConfiguration("Staging");
+   *
    * @param {string} oldConfig The name of the configuration to duplicate
    * @param {string} newConfig The new name of duplicated configuraton
    */
@@ -148,6 +190,12 @@ export default class Configuration {
 
   /**
    * Duplicate a specific target configuration by name
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const diplicated = project.configuration.duplicateTargetConfiguration("TestProject", "Release", "Staging");
+   *
+   * console.log(diplicated);
    *
    * @param {string} target The name of the target
    * @param {string} oldConfig The name of the configuration to duplicate
@@ -177,6 +225,12 @@ export default class Configuration {
   /**
    * Duplicate a project configuration by name (it won't duplicate targets' configurations)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const projectConfigurationStagingResult = project.configuration.duplicateProjectConfiguration("Release", "Staging");
+   *
+   * console.log(projectConfigurationStagingResult);
+   *
    * @param {string} oldConfig The name of the configuration to duplicate
    * @param {string} newConfig The new name of duplicated configuraton
    * @returns {*} The new duplicated configuration (ref) or null if error
@@ -199,6 +253,13 @@ export default class Configuration {
   /**
    * Set a user-defined configuration variable for a specific target configuration
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setUserDefinedTargetConfiguration(tg.name, "Staging" "REACT_HEADERS_PATH", '$(BUILT_PRODUCTS_DIR)/../Release-$(PLATFORM_NAME)/include');
+   * });
+   *
    * @param {string} target The name of the target
    * @param {string} config The name of the configuration
    * @param {string} key The usef defined variable name
@@ -213,6 +274,13 @@ export default class Configuration {
 
   /**
    * Set a user-defined configuration variable for a specific target (including all configurations)
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setUserDefinedTarget(tg.name, "REACT_HEADERS_PATH", '$(BUILT_PRODUCTS_DIR)/../Release-$(PLATFORM_NAME)/include');
+   * });
    *
    * @param {string} target The name of the target
    * @param {string} config The name of the configuration
@@ -232,6 +300,13 @@ export default class Configuration {
   /**
    * Set the headers' search paths for a specific target configuration
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setHeadersPathTargetConfiguration(tg.name, "Release", ['$(inherited)', '$(REACT_HEADERS_PATH)']);
+   * });
+   *
    * @param {string} target The name of the target
    * @param {string} config The name of the configuration
    * @param values The headers' search path array
@@ -248,6 +323,13 @@ export default class Configuration {
   /**
    * Set the headers' search paths for a specific target (including all configurations)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setHeadersPathTarget(tg.name, ['$(inherited)', '$(REACT_HEADERS_PATH)']);
+   * });
+   *
    * @param {string} target The name of the target
    * @param values The headers' search path array
    */
@@ -262,8 +344,9 @@ export default class Configuration {
       conf.buildSettings['HEADER_SEARCH_PATHS'] = val;
     });
   }
-};
-</code></pre>
+}
+
+export default Configuration;</code></pre>
         </article>
     </section>
 
@@ -275,7 +358,7 @@ export default class Configuration {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Feb 23 2017 23:19:34 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Feb 24 2017 00:06:11 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
