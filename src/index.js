@@ -2,15 +2,10 @@ import Xcode from 'xcode';
 import fs from "fs";
 import Configuration from "./configuration";
 
-// process.stdout.write(myProj.writeSync());
-
-// console.log(pbx_uid(myProj.hash));
-
-//console.log(myProj.hash.project.objects.XCBuildConfiguration);
-// console.log(myProj.hash.project.objects.XCConfigurationList);
-// console.log(Object.keys(myProj.hash.project.objects.XCConfigurationList).length);
-
-export default class Project {
+/**
+ * Base class to handle pbxproj file and basic project informations
+ */
+class Project {
   constructor(path) {
     this.projectPath = path;
     this.myProj = Xcode.project(this.projectPath);
@@ -23,6 +18,15 @@ export default class Project {
 
   /**
    * Get a specific project's target by name
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const target = project.getTarget("TestProject");
+   * console.log(target);
+   *
+   * project.getTargets().forEach((tg) => {
+   *   console.log(project.getTarget(tg.name));
+   * });
    *
    * @param {string} name The name of the target
    * @returns {*} The target (ref) or null if error
@@ -44,6 +48,11 @@ export default class Project {
   /**
    * Get all project's targets
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const targets = project.getTargets();
+   * console.log(targets);
+   *
    * @returns {Array} The targets (copy)
    */
   getTargets() {
@@ -61,6 +70,11 @@ export default class Project {
   /**
    * Save all modifications
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * project.save();
+   * project.save("project_second.pbxproj");
+   *
    * @param {string} path The new project path (not required)
    */
   save(path) {
@@ -72,6 +86,10 @@ export default class Project {
   /**
    * Return project as string (can be usefull to make bash redirections and other manipulations)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * process.stdout.write(project.toString());
+   *
    * @returns {string}
    */
   toString() {
@@ -79,6 +97,4 @@ export default class Project {
   }
 }
 
-// const project = new Project('project.pbxproj');
-//
-// project.save('project.new.pbxproj');
+export default Project;

@@ -1,12 +1,24 @@
 import Utils from "./utils";
 
-export default class Configuration {
+/**
+ * Configuration handler to manipulate build configurations for project and targets
+ */
+class Configuration {
   constructor(xcode) {
     this.xcode = xcode;
   }
 
   /**
    * Get a specific target configuration list
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   const targetConfiguration = project.configuration.getTargetConfigurations(tg.name);
+   *
+   *   console.log(targetConfiguration);
+   * });
    *
    * @param {string} target The name of the target
    * @returns {*} The configuration list (ref) or null if error
@@ -29,6 +41,17 @@ export default class Configuration {
 
   /**
    * Get a specific target configuration
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   const targetConfigurationDebug = project.configuration.getTargetConfigurations(tg.name, "Debug");
+   *   const targetConfigurationRelease = project.configuration.getTargetConfigurations(tg.name, "Release");
+   *
+   *   console.log(targetConfigurationDebug);
+   *   console.log(targetConfigurationRelease);
+   * });
    *
    * @param {string} target The name of the target
    * @param {string} name The name of the configuration
@@ -54,6 +77,12 @@ export default class Configuration {
   /**
    * Get the project configuration list
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const projectConfigurations = project.configuration.getProjectConfigurations();
+   *
+   * console.log(projectConfigurations);
+   *
    * @returns {*} The configuration list (ref) or null if error
    */
   getProjectConfigurations() {
@@ -68,6 +97,12 @@ export default class Configuration {
 
   /**
    * Get a configuration by name
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const projectConfigurationRelease = project.configuration.getProjectConfiguration("Release");
+   *
+   * console.log(projectConfigurationRelease);
    *
    * @param {string} name The name of the configuration
    * @returns {*} The configuration (ref) or null if error
@@ -89,6 +124,13 @@ export default class Configuration {
   /**
    * Duplicate a configuration by name (project + all targets)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.configuration.duplicateConfiguration("Release", "Staging");
+   *
+   * const projectConfigurationStaging = project.configuration.getProjectConfiguration("Staging");
+   *
    * @param {string} oldConfig The name of the configuration to duplicate
    * @param {string} newConfig The new name of duplicated configuraton
    */
@@ -109,6 +151,12 @@ export default class Configuration {
 
   /**
    * Duplicate a specific target configuration by name
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const diplicated = project.configuration.duplicateTargetConfiguration("TestProject", "Release", "Staging");
+   *
+   * console.log(diplicated);
    *
    * @param {string} target The name of the target
    * @param {string} oldConfig The name of the configuration to duplicate
@@ -138,6 +186,12 @@ export default class Configuration {
   /**
    * Duplicate a project configuration by name (it won't duplicate targets' configurations)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   * const projectConfigurationStagingResult = project.configuration.duplicateProjectConfiguration("Release", "Staging");
+   *
+   * console.log(projectConfigurationStagingResult);
+   *
    * @param {string} oldConfig The name of the configuration to duplicate
    * @param {string} newConfig The new name of duplicated configuraton
    * @returns {*} The new duplicated configuration (ref) or null if error
@@ -160,6 +214,13 @@ export default class Configuration {
   /**
    * Set a user-defined configuration variable for a specific target configuration
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setUserDefinedTargetConfiguration(tg.name, "Staging" "REACT_HEADERS_PATH", '$(BUILT_PRODUCTS_DIR)/../Release-$(PLATFORM_NAME)/include');
+   * });
+   *
    * @param {string} target The name of the target
    * @param {string} config The name of the configuration
    * @param {string} key The usef defined variable name
@@ -174,6 +235,13 @@ export default class Configuration {
 
   /**
    * Set a user-defined configuration variable for a specific target (including all configurations)
+   *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setUserDefinedTarget(tg.name, "REACT_HEADERS_PATH", '$(BUILT_PRODUCTS_DIR)/../Release-$(PLATFORM_NAME)/include');
+   * });
    *
    * @param {string} target The name of the target
    * @param {string} config The name of the configuration
@@ -193,6 +261,13 @@ export default class Configuration {
   /**
    * Set the headers' search paths for a specific target configuration
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setHeadersPathTargetConfiguration(tg.name, "Release", ['$(inherited)', '$(REACT_HEADERS_PATH)']);
+   * });
+   *
    * @param {string} target The name of the target
    * @param {string} config The name of the configuration
    * @param values The headers' search path array
@@ -209,6 +284,13 @@ export default class Configuration {
   /**
    * Set the headers' search paths for a specific target (including all configurations)
    *
+   * @example
+   * const project = new Xcode('project.pbxproj');
+   *
+   * project.getTargets().forEach((tg) => {
+   *   project.configuration.setHeadersPathTarget(tg.name, ['$(inherited)', '$(REACT_HEADERS_PATH)']);
+   * });
+   *
    * @param {string} target The name of the target
    * @param values The headers' search path array
    */
@@ -223,4 +305,6 @@ export default class Configuration {
       conf.buildSettings['HEADER_SEARCH_PATHS'] = val;
     });
   }
-};
+}
+
+export default Configuration;
