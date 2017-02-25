@@ -12,7 +12,7 @@ class Project {
 
     this.myProj.parseSync();
 
-    this.configuration = new Configuration(this.myProj.hash)
+    this.configuration = new Configuration(this, this.myProj.hash)
   }
 
 

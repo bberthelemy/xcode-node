@@ -4,7 +4,8 @@ import Utils from "./utils";
  * Configuration handler to manipulate build configurations for project and targets
  */
 class Configuration {
-  constructor(xcode) {
+  constructor(project, xcode) {
+    this.project = project;
     this.xcode = xcode;
   }
 
