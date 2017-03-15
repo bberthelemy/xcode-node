@@ -306,6 +306,54 @@ class Configuration {
             conf.buildSettings['HEADER_SEARCH_PATHS'] = val;
         });
     }
+
+    /**
+     * Set the preprocessor macros for a specific target configuration
+     *
+     * @example
+     * const project = new Xcode('project.pbxproj');
+     *
+     * project.getTargets().forEach((tg) => {
+     *   project.configuration.setPreprocessorMacrosTargetConfiguration(tg.name, "Release", ['$(inherited)']);
+     * });
+     *
+     * @param {string} target The name of the target
+     * @param {string} config The name of the configuration
+     * @param values The preprocessor macros array
+     */
+    setPreprocessorMacrosTargetConfiguration(target, config, values) {
+        const conf = this.getTargetConfiguration(target, config);
+        const val = values.map((it) => {
+            return `"${it}"`;
+        });
+
+        conf.buildSettings['GCC_PREPROCESSOR_DEFINITIONS'] = val;
+    }
+
+    /**
+     * Set the preprocessor macros for a specific target (including all configurations)
+     *
+     * @example
+     * const project = new Xcode('project.pbxproj');
+     *
+     * project.getTargets().forEach((tg) => {
+     *   project.configuration.setPreprocessorMacrosTarget(tg.name, ['$(inherited)']);
+     * });
+     *
+     * @param {string} target The name of the target
+     * @param values The preprocessor macros array
+     */
+    setPreprocessorMacrosTarget(target, values) {
+        const configs = this.getTargetConfigurations(target);
+        const val = values.map((it) => {
+            return `"${it}"`;
+        });
+
+        configs && configs.buildConfigurations.forEach((it) => {
+            const conf = this.xcode.project.objects.XCBuildConfiguration[it.value];
+	    conf.buildSettings['GCC_PREPROCESSOR_DEFINITIONS'] = val;
+        });
+    }
 }
 
 export default Configuration;

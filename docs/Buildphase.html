@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Project - Documentation</title>
+    <title>Buildphase - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Project</h1>
+    <h1 class="page-title">Buildphase</h1>
     
 
     
@@ -40,10 +40,10 @@
 <header>
     
         <h2>
-        Project
+        Buildphase
         </h2>
         
-            <div class="class-description"><p>Base class to handle pbxproj file and basic project informations</p></div>
+            <div class="class-description"><p>Build Phases handler to manipulate build phase items for project and targets</p></div>
         
     
 </header>
@@ -57,7 +57,7 @@
     <h2>Constructor</h2>
     
 
-    <h4 class="name" id="Project"><span class="type-signature"></span>new Project<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Buildphase"><span class="type-signature"></span>new Buildphase<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -69,7 +69,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line9">line 9</a>
+        <a href="buildphase.js.html">buildphase.js</a>, <a href="buildphase.js.html#line6">line 6</a>
     </li></ul></dd>
     
 
@@ -155,7 +155,7 @@
 
     
 
-    <h4 class="name" id="getTarget"><span class="type-signature"></span>getTarget<span class="signature">(name)</span><span class="type-signature"> &rarr; {*}</span></h4>
+    <h4 class="name" id="addScript"><span class="type-signature"></span>addScript<span class="signature">(target, script, name)</span><span class="type-signature"></span></h4>
 
     
 
@@ -167,7 +167,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line36">line 36</a>
+        <a href="buildphase.js.html">buildphase.js</a>, <a href="buildphase.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
@@ -207,7 +207,7 @@
 
 
 <div class="description">
-    <p>Get a specific project's target by name</p>
+    <p>Add a script build phase to a specific target</p>
 </div>
 
 
@@ -220,13 +220,8 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const project = new Xcode('project.pbxproj');
-const target = project.getTarget("TestProject");
-console.log(target);
-
-project.getTargets().forEach((tg) => {
-  console.log(project.getTarget(tg.name));
-});</code></pre>
+    <pre class="prettyprint"><code>const p = new Project("project.pbxproj");
+p.buildphase.addScript("TestProject", 'echo hello world', "Basic test");</code></pre>
 
 
 
@@ -256,15 +251,10 @@ project.getTargets().forEach((tg) => {
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>target</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
             
             </td>
 
@@ -276,270 +266,13 @@ project.getTargets().forEach((tg) => {
         </tr>
 
     
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>The target (ref) or null if error</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getTargets"><span class="type-signature"></span>getTargets<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line60">line 60</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>Get all project's targets</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>const project = new Xcode('project.pbxproj');
-const targets = project.getTargets();
-console.log(targets);</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>The targets (copy)</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="save"><span class="type-signature"></span>save<span class="signature">(path)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line82">line 82</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>Save all modifications</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>const project = new Xcode('project.pbxproj');
-project.save();
-project.save("project_second.pbxproj");</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
 
         <tr>
             
-                <td class="name"><code>path</code></td>
+                <td class="name"><code>script</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
             
             </td>
 
@@ -547,7 +280,25 @@ project.save("project_second.pbxproj");</code></pre>
 
             
 
-            <td class="description last"><p>The new project path (not required)</p></td>
+            <td class="description last"><p>The script</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Used to rename the phase with your own name</p></td>
         </tr>
 
     
@@ -567,114 +318,6 @@ project.save("project_second.pbxproj");</code></pre>
 
 
 
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line97">line 97</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>Return project as string (can be usefull to make bash redirections and other manipulations)</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>const project = new Xcode('project.pbxproj');
-process.stdout.write(project.toString());</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
 
 
         

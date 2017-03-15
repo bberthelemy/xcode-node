@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>index.js - Documentation</title>
+    <title>buildphase.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">buildphase.js</h1>
     
 
     
@@ -37,109 +37,56 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import Xcode from "xcode";
-import fs from "fs";
-import Configuration from "./configuration";
-import Buildphase from "./buildphase";
+            <pre class="prettyprint source linenums"><code>import Utils from "./utils";
 
 /**
- * Base class to handle pbxproj file and basic project informations
+ * Build Phases handler to manipulate build phase items for project and targets
  */
-class Project {
-    constructor(path) {
-        this.projectPath = path;
-        this.myProj = Xcode.project(this.projectPath);
-
-        this.myProj.parseSync();
-
-        this.configuration = new Configuration(this, this.myProj.hash)
-        this.buildphase = new Buildphase(this, this.myProj.hash)
-    }
-
-
-    /**
-     * Get a specific project's target by name
-     *
-     * @example
-     * const project = new Xcode('project.pbxproj');
-     * const target = project.getTarget("TestProject");
-     * console.log(target);
-     *
-     * project.getTargets().forEach((tg) => {
-   *   console.log(project.getTarget(tg.name));
-   * });
-     *
-     * @param {string} name The name of the target
-     * @returns {*} The target (ref) or null if error
-     */
-    getTarget(name) {
-        const targets = this.myProj.hash.project.objects.PBXNativeTarget;
-
-        for (const i in targets) {
-            if (typeof i === "string" &amp;&amp; i.indexOf("_comment") === -1) {
-                if (targets[i].name === name) {
-                    return targets[i];
-                }
-            }
-        }
-
-        return null;
+class Buildphase {
+    constructor(project, xcode) {
+        this.project = project;
+        this.xcode = xcode;
     }
 
     /**
-     * Get all project's targets
+     * Add a script build phase to a specific target
      *
      * @example
-     * const project = new Xcode('project.pbxproj');
-     * const targets = project.getTargets();
-     * console.log(targets);
+     * const p = new Project("project.pbxproj");
+     * p.buildphase.addScript("TestProject", 'echo hello world', "Basic test");
      *
-     * @returns {Array} The targets (copy)
+     * @param target The name of the target
+     * @param script The script
+     * @param name Used to rename the phase with your own name
      */
-    getTargets() {
-        const targets = this.myProj.hash.project.objects.PBXNativeTarget;
+    addScript(target, script, name) {
+        const tg = this.project.getTarget(target);
+        const key = Utils.pbx_uid(this.xcode);
+        const keyComment = `${key}_comment`;
 
-        const keys = Object.keys(targets).filter((it) => {
-            return typeof it === "string" &amp;&amp; it.indexOf("_comment") === -1;
+        const phase = {
+            isa: "PBXShellScriptBuildPhase",
+            buildActionMask: 2147483647,
+            files: [],
+            inputPaths: [],
+            outputPaths: [],
+            runOnlyForDeploymentPostprocessing: 0,
+            shellPath: "/bin/sh",
+            shellScript: `"${script}"`
+        };
+        if (name) {phase.name = `"${name}"`}
+
+        this.xcode.project.objects.PBXShellScriptBuildPhase[key] = phase;
+        this.xcode.project.objects.PBXShellScriptBuildPhase[keyComment] = (name) ? name : "ShellScript";
+
+        tg.buildPhases.push({
+            value: key,
+            comment: (name) ? name : "ShellScript"
         });
-
-        return keys.map((it) => {
-            return targets[it];
-        });
-    }
-
-    /**
-     * Save all modifications
-     *
-     * @example
-     * const project = new Xcode('project.pbxproj');
-     * project.save();
-     * project.save("project_second.pbxproj");
-     *
-     * @param {string} path The new project path (not required)
-     */
-    save(path) {
-        const newPath = (path) ? path : this.projectPath;
-
-        fs.writeFileSync(newPath, this.myProj.writeSync());
-    }
-
-    /**
-     * Return project as string (can be usefull to make bash redirections and other manipulations)
-     *
-     * @example
-     * const project = new Xcode('project.pbxproj');
-     * process.stdout.write(project.toString());
-     *
-     * @returns {string}
-     */
-    toString() {
-        return this.myProj.writeSync().toString();
     }
 }
 
-export default Project;
-</code></pre>
+export default Buildphase;</code></pre>
         </article>
     </section>
 
