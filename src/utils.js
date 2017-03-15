@@ -1,32 +1,32 @@
-import {randomBytes} from 'crypto';
+import {randomBytes} from "crypto";
 
 function getUids(xcode) {
-  let uids = [];
+    let uids = [];
 
-  Object.keys(xcode.project.objects).forEach((section) => {
-    const keys = Object.keys(xcode.project.objects[section]);
+    Object.keys(xcode.project.objects).forEach((section) => {
+        const keys = Object.keys(xcode.project.objects[section]);
 
-    const newKeys = keys.filter((item) => {
-      return (typeof item === "string" && item.indexOf("_comment") === -1);
+        const newKeys = keys.filter((item) => {
+            return (typeof item === "string" && item.indexOf("_comment") === -1);
+        });
+
+        uids = [...uids, ...newKeys];
     });
 
-    uids = [...uids, ...newKeys];
-  });
-
-  return uids;
+    return uids;
 }
 
 function pbx_uid(xcode) {
-  const uids = getUids(xcode);
-  let uid = null;
+    const uids = getUids(xcode);
+    let uid = null;
 
-  do {
-    uid = randomBytes(12).toString('hex').toUpperCase();
-  } while (uids.indexOf(uid) != -1);
+    do {
+        uid = randomBytes(12).toString('hex').toUpperCase();
+    } while (uids.indexOf(uid) != -1);
 
-  return uid;
+    return uid;
 }
 
 export default {
-  pbx_uid
+    pbx_uid
 };
