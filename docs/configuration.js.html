@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Buildphase.html">Buildphase</a><ul class='methods'><li data-type='method'><a href="Buildphase.html#addScript">addScript</a></li></ul></li><li><a href="Configuration.html">Configuration</a><ul class='methods'><li data-type='method'><a href="Configuration.html#duplicateConfiguration">duplicateConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfiguration">getProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfigurations">getProjectConfigurations</a></li><li data-type='method'><a href="Configuration.html#getTargetConfiguration">getTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getTargetConfigurations">getTargetConfigurations</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li></ul></li><li><a href="Project.html">Project</a><ul class='methods'><li data-type='method'><a href="Project.html#getTarget">getTarget</a></li><li data-type='method'><a href="Project.html#getTargets">getTargets</a></li><li data-type='method'><a href="Project.html#save">save</a></li><li data-type='method'><a href="Project.html#toString">toString</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Buildphase.html">Buildphase</a><ul class='methods'><li data-type='method'><a href="Buildphase.html#addScript">addScript</a></li></ul></li><li><a href="Configuration.html">Configuration</a><ul class='methods'><li data-type='method'><a href="Configuration.html#duplicateConfiguration">duplicateConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfiguration">getProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfigurations">getProjectConfigurations</a></li><li data-type='method'><a href="Configuration.html#getTargetConfiguration">getTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getTargetConfigurations">getTargetConfigurations</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setPreprocessorMacrosTarget">setPreprocessorMacrosTarget</a></li><li data-type='method'><a href="Configuration.html#setPreprocessorMacrosTargetConfiguration">setPreprocessorMacrosTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li></ul></li><li><a href="Project.html">Project</a><ul class='methods'><li data-type='method'><a href="Project.html#getTarget">getTarget</a></li><li data-type='method'><a href="Project.html#getTargets">getTargets</a></li><li data-type='method'><a href="Project.html#save">save</a></li><li data-type='method'><a href="Project.html#toString">toString</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -345,6 +345,54 @@ class Configuration {
             conf.buildSettings['HEADER_SEARCH_PATHS'] = val;
         });
     }
+
+    /**
+     * Set the preprocessor macros for a specific target configuration
+     *
+     * @example
+     * const project = new Xcode('project.pbxproj');
+     *
+     * project.getTargets().forEach((tg) => {
+     *   project.configuration.setPreprocessorMacrosTargetConfiguration(tg.name, "Release", ['$(inherited)']);
+     * });
+     *
+     * @param {string} target The name of the target
+     * @param {string} config The name of the configuration
+     * @param values The preprocessor macros array
+     */
+    setPreprocessorMacrosTargetConfiguration(target, config, values) {
+        const conf = this.getTargetConfiguration(target, config);
+        const val = values.map((it) => {
+            return `"${it}"`;
+        });
+
+        conf.buildSettings['GCC_PREPROCESSOR_DEFINITIONS'] = val;
+    }
+
+    /**
+     * Set the preprocessor macros for a specific target (including all configurations)
+     *
+     * @example
+     * const project = new Xcode('project.pbxproj');
+     *
+     * project.getTargets().forEach((tg) => {
+     *   project.configuration.setPreprocessorMacrosTarget(tg.name, ['$(inherited)']);
+     * });
+     *
+     * @param {string} target The name of the target
+     * @param values The preprocessor macros array
+     */
+    setPreprocessorMacrosTarget(target, values) {
+        const configs = this.getTargetConfigurations(target);
+        const val = values.map((it) => {
+            return `"${it}"`;
+        });
+
+        configs &amp;&amp; configs.buildConfigurations.forEach((it) => {
+            const conf = this.xcode.project.objects.XCBuildConfiguration[it.value];
+	    conf.buildSettings['GCC_PREPROCESSOR_DEFINITIONS'] = val;
+        });
+    }
 }
 
 export default Configuration;
@@ -360,7 +408,7 @@ export default Configuration;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Mar 15 2017 10:18:08 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Mar 15 2017 17:15:32 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
