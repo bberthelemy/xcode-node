@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Configuration.html">Configuration</a><ul class='methods'><li data-type='method'><a href="Configuration.html#duplicateConfiguration">duplicateConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfiguration">getProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfigurations">getProjectConfigurations</a></li><li data-type='method'><a href="Configuration.html#getTargetConfiguration">getTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getTargetConfigurations">getTargetConfigurations</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li></ul></li><li><a href="Project.html">Project</a><ul class='methods'><li data-type='method'><a href="Project.html#getTarget">getTarget</a></li><li data-type='method'><a href="Project.html#getTargets">getTargets</a></li><li data-type='method'><a href="Project.html#save">save</a></li><li data-type='method'><a href="Project.html#toString">toString</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Buildphase.html">Buildphase</a><ul class='methods'><li data-type='method'><a href="Buildphase.html#addScript">addScript</a></li></ul></li><li><a href="Configuration.html">Configuration</a><ul class='methods'><li data-type='method'><a href="Configuration.html#duplicateConfiguration">duplicateConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateProjectConfiguration">duplicateProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#duplicateTargetConfiguration">duplicateTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfiguration">getProjectConfiguration</a></li><li data-type='method'><a href="Configuration.html#getProjectConfigurations">getProjectConfigurations</a></li><li data-type='method'><a href="Configuration.html#getTargetConfiguration">getTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#getTargetConfigurations">getTargetConfigurations</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTarget">setHeadersPathTarget</a></li><li data-type='method'><a href="Configuration.html#setHeadersPathTargetConfiguration">setHeadersPathTargetConfiguration</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTarget">setUserDefinedTarget</a></li><li data-type='method'><a href="Configuration.html#setUserDefinedTargetConfiguration">setUserDefinedTargetConfiguration</a></li></ul></li><li><a href="Project.html">Project</a><ul class='methods'><li data-type='method'><a href="Project.html#getTarget">getTarget</a></li><li data-type='method'><a href="Project.html#getTargets">getTargets</a></li><li data-type='method'><a href="Project.html#save">save</a></li><li data-type='method'><a href="Project.html#toString">toString</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -50,6 +50,7 @@
 <p><img src="https://raw.githubusercontent.com/bberthelemy/xcode-node/master/assets/pbxproj.png" alt="alt .pbxproj image"></p>
 <h2>Install</h2><p><code>npm install xcode-node --save</code></p>
 <p>(not yet on npmjs, for now just clone this repository)</p>
+<h2>Documentation</h2><p><a href="">https://bberthelemy.github.io/xcode-node</a></p>
 <h2>Build and run from sources</h2><pre class="prettyprint source"><code>$ npm run prepublish
 $ node lib/index.js</code></pre><h2>Generate documentation</h2><p><code>$ npm run generate-docs</code></p>
 <h2>Roadmap</h2><ul>
@@ -59,13 +60,13 @@ $ node lib/index.js</code></pre><h2>Generate documentation</h2><p><code>$ npm ru
 <li>[X] <span style="color:lightgreen">Duplicate configurations (project + targets)</span></li>
 <li>[X] <span style="color:lightgreen">Set user-defined variables (project + targets)</span></li>
 <li>[X] <span style="color:lightgreen">Set headers' search path (project + targets)</span></li>
-<li>[] <span style="color:red">More targets manipulations (remove, rename ...)</span></li>
-<li>[] <span style="color:red">More build configuration manipulations (other important properties, remove, create from scratch ...)</span></li>
-<li>[] <span style="color:red">Manage schemes</span></li>
-<li>[] <span style="color:red">Manage dependencies (libraries, frameworks ...)</span></li>
-<li>[] <span style="color:red">Manage file structure + groups</span></li>
-<li>[] <span style="color:red">Manage build phases</span></li>
-<li>[] <span style="color:red">DEFINE THE ROADMAP MORE PRECISELY</span></li>
+<li>[ ] <span style="color:red">More targets manipulations (remove, rename ...)</span></li>
+<li>[ ] <span style="color:red">More build configuration manipulations (other important properties, remove, create from scratch ...)</span></li>
+<li>[ ] <span style="color:red">Manage schemes</span></li>
+<li>[ ] <span style="color:red">Manage dependencies (libraries, frameworks ...)</span></li>
+<li>[ ] <span style="color:red">Manage file structure + groups</span></li>
+<li>[ ] <span style="color:red">Manage build phases</span></li>
+<li>[ ] <span style="color:red">DEFINE THE ROADMAP MORE PRECISELY</span></li>
 </ul></article>
     </section>
 
@@ -79,7 +80,7 @@ $ node lib/index.js</code></pre><h2>Generate documentation</h2><p><code>$ npm ru
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Feb 24 2017 00:06:11 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Mar 15 2017 10:18:08 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
